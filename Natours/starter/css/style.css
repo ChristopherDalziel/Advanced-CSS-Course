@@ -33,6 +33,45 @@ body {
     url("../img/hero.jpg");
   background-size: cover;
   background-position: top;
+  /* This is the relative of where the top/bottom is taken from below */
+  position: relative;
   /* 0 0 = we don't want it to move on the x or y axis, 100% = we want it to be 100% of the width of the element, 100%, 50% = 100% x and 200px y, 0 100% = back to the start and 100% y (height) again. */
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%, 0 100%);
+}
+
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.logo {
+  height: 35px;
+}
+
+.text-box {
+  position: absolute;
+  /* Top and bottom are relative to the parent element */
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.heading-primary-main {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 17.4px;
 }
