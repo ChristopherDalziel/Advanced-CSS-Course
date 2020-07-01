@@ -20,4 +20,19 @@ body {
   font-size: 16px;
   line-height: 1.7;
   color: #777;
+  padding: 30px;
+}
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(126, 213, 111, 0.8),
+      rgba(40, 180, 131, 0.8)
+    ),
+    url("../img/hero.jpg");
+  background-size: cover;
+  background-position: top;
+  /* 0 0 = we don't want it to move on the x or y axis, 100% = we want it to be 100% of the width of the element, 100%, 50% = 100% x and 200px y, 0 100% = back to the start and 100% y (height) again. */
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%, 0 100%);
 }
