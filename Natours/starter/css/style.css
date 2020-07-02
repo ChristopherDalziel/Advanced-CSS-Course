@@ -55,11 +55,13 @@ body {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
+  margin-bottom: 60px;
 }
 
 .heading-primary-main {
@@ -120,4 +122,32 @@ body {
     opacity: 1;
     transform: translate(0);
   }
+}
+
+/* Pseudo class for link - style elements under a special condition  */
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  /* Gives element it's own space */
+  display: inline-block;
+  border-radius: 100px;
+  /* all transitions short-hand, this also applies this transition to the hover and the active below the transition state must be on the initial state */
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  /* offset in the x direction, offset in the y direction, blur, color and transparency */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
+  padding: 15px 40px;
 }
