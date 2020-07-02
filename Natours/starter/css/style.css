@@ -124,6 +124,21 @@ body {
   }
 }
 
+@keyframes move-in-bottom {
+  /* Start - Initial State */
+  0% {
+    opacity: 0;
+    /* X because we're going left to right */
+    transform: translateY(200px);
+  }
+
+  /* End - Final State */
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
 /* Pseudo class for link - style elements under a special condition  */
 .btn:link,
 .btn:visited {
@@ -134,6 +149,7 @@ body {
   border-radius: 100px;
   /* all transitions short-hand, this also applies this transition to the hover and the active below the transition state must be on the initial state */
   transition: all 0.2s;
+  position: relative;
 }
 
 .btn:hover {
@@ -150,4 +166,36 @@ body {
   background-color: #fff;
   color: #777;
   padding: 15px 40px;
+}
+
+.btn::after {
+  /* When you pseudo after, we MUST specify content & display */
+  content: "";
+  display: inline-block;
+  /* This is 100% of the width of the already specified btn */
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn-white::after {
+  background-color: #fff;
+}
+
+/* pseudo after only when the button is hovered */
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  /* Fade out, it's going to opacity 0 */
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: move-in-bottom 3s ease-out 0.75s;
+  /* Automatically applies the 0% keyframe before the animation begins */
+  animation-fill-mode: backwards;
 }
