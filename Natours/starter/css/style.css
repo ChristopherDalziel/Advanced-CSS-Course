@@ -166,11 +166,12 @@ body {
 .btn:hover {
   transform: translateY(-0.3rem);
   /* offset in the x direction, offset in the y direction, blur, color and transparency */
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 .btn:active {
   transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .btn-white {
