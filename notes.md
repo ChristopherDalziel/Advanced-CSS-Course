@@ -46,3 +46,59 @@
 5. Render Tree
 6. Website rendering (The visual formatting model)
 7. Final website is rendered
+
+# How CSS is parsed (Part 1)
+
+.myClass = selector <br />
+{} = declaration block <br />
+font-size = property <br />
+20px = declaration value <br />
+font-size: 20px; = declaration
+
+```
+.my-class {
+  color: blue;
+  text-align: center;
+  font-size: 20px
+}
+```
+
+## The cascade (The "C" in CSS)
+
+- Process of combining different stylesheets and resolving conflicts between CSS rules and declarations, when more than one rule applies to a certain element.
+
+- Default browser declarations (Example default anchor tags been styled with blue text and underlines). This is called the `User agent css/stylesheet`
+
+importance > specificity > source order
+
+### Importance
+
+1. User !important declarations
+2. Author !import declarations
+3. Author declarations
+4. User declarations
+5. Default browser declarations
+
+### Specificity
+
+1. Inline styles
+2. ID's
+3. Classes, pseudo-classes, attributes
+4. Elements, pseudo-elements
+
+### Source order
+
+If everything from importance, and specificity is still a tie at this point the last declaration written in the code will override all other declarations and will be applied.
+
+## Recap
+
+- CSS Declarations marked with !important have the highest priority
+- You should only use !important as a last resort, it's better to use correct specificities - this will make your code more maintainable
+- inline styles will always have priortiy over styles in external stylesheets however this is not good practice
+- A selector contains 1 ID more specific than one with 1000 classes
+- A selector that contains 1 class is more specific than one with a 1000 elements
+
+- The universal selector `*` has no specificity value (0,0,0,0)
+
+- Rely more on specificity than on the order of your selectors
+- But, rely on order when using 3rd party style sheets - always put your author (your own) stylesheet last
