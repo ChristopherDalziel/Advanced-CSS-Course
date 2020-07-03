@@ -101,4 +101,7 @@ If everything from importance, and specificity is still a tie at this point the 
 - The universal selector `*` has no specificity value (0,0,0,0)
 
 - Rely more on specificity than on the order of your selectors
+
 - But, rely on order when using 3rd party style sheets - always put your author (your own) stylesheet last
+
+[CodePen Example!](https://codepen.io/christopherdalziel/pen/qBbppwj)
