@@ -105,3 +105,53 @@ If everything from importance, and specificity is still a tie at this point the 
 - But, rely on order when using 3rd party style sheets - always put your author (your own) stylesheet last
 
 [CodePen Example!](https://codepen.io/christopherdalziel/pen/qBbppwj)
+
+# How CSS is parsed (Part 2)
+
+### How CSS values are processed
+
+```
+You must understand EVERYTHING is converted to pixels in the end
+```
+
+1. Declared value (author declarations)
+
+2. Cascaded value (after the cascade (Example of `font-size`: if there is absolutely no value the browser default value of `16px` will still be specified here))
+
+3. Specified value (default, there is no cascaded value?, (Example of `padding`: if there is absolutely no value the initial value of `0` will still be specified here))
+
+4. Computed value (converting relative values from absolute)
+
+5. Used value (final calculations based on layout)
+
+6. Actual value (browser and device restrictions)
+
+`This information was explained clearly with tables on the udemy tut, would check again later.`
+
+### How units are converted from relative to absolute (px)
+
+#### em (font)
+
+3em converted to pixels = <br />
+em * parent computed font size = 72px (3*24)
+
+#### em (lengths)
+
+2em <br />
+`Exmaple in tut` <br/>
+em \* current element computed font-size = 48px
+
+#### rem
+
+em \* root =
+
+## Recap
+
+- Each CSS property has an initial value which is used if nothing is declared
+- Browers specify a `root font-size` for each page (Usually 16px)
+- Percentages and relative values are always converted to pixels
+- Percentages are measured relative to their parents font-size, if used to specify font size
+- Percentages are measured relative to their parents with, if used to specify lengths
+  -em are measured relative to their parent font-size, if used to specify font-size
+  -em are measured relative to the current font-size, if used to specify lengths
+- rem are always measured relative to the documents root font-size
