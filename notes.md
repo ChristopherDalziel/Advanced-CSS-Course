@@ -191,3 +191,10 @@ No the property is not inherited: specified value = initial value
 - Inheritance of a property only works if nobody declares a value for that property
 - The inherit keyword forces inheritance on a certain property
 - The initial keyword resets a property to it's initial value
+
+# Converting px to rem, why?
+
+- How and why to use rem units in our projects
+- A workflow to convert px to rem
+
+Using rem always the developer to easily create responsive websites because the sizings will be automatically adjusted to the font size
