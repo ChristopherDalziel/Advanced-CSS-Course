@@ -180,3 +180,14 @@ No: Is the property inherited? (Specific to each property) <br/>
 Yes the property is inherited: specified value = computed value of the parent element.
 
 The value isn't simply 150% it's the computed value, in this case it's 150% of 20px which is 30px so the line height in the child element will be 30px not 150% of the 25px font size.
+
+No the property is not inherited: specified value = initial value
+
+## Recap
+
+- Inheritance passes the values of some specific properties from parents to children - more maintainable code
+- Properties related to text are inherited: font-family, font-size, color etc
+- The computed value of a property is what gets inherited not the declared value
+- Inheritance of a property only works if nobody declares a value for that property
+- The inherit keyword forces inheritance on a certain property
+- The initial keyword resets a property to it's initial value
