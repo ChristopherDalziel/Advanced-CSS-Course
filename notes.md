@@ -155,3 +155,28 @@ em \* root =
   -em are measured relative to their parent font-size, if used to specify font-size
   -em are measured relative to the current font-size, if used to specify lengths
 - rem are always measured relative to the documents root font-size
+
+# Inheritance in CSS
+
+Example:
+Lets analyse the line-height of the child
+
+```
+.parent {
+  font-size: 20px;
+  line-height: 150%;
+}
+
+.child {
+  font-size: 25px;
+}
+```
+
+Every CSS property must have a value even if it is not specified.
+
+Is there a cascaded value? <br />
+Yes: Specified value = cascaded value <br />
+No: Is the property inherited? (Specific to each property) <br/>
+Yes the property is inherited: specified value = computed value of the parent element.
+
+The value isn't simply 150% it's the computed value, in this case it's 150% of 20px which is 30px so the line height in the child element will be 30px not 150% of the 25px font size.
