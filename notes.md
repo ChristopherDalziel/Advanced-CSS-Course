@@ -354,3 +354,51 @@ The 7-1 pattern
 5. themes/
 6. abstracts/
 7. vendors/
+
+# What is SaSS ?
+
+SaSS is a CSS preprocessor an extension of CSS - we use it to fix the problems that CSS creates
+
+SaSS needs to be compiled
+
+SaSS Source Code => SaSS Compiler => Compiled SaSS Code (Regular CSS Code)
+
+## What does SaSS give us?
+
+- Variables: for reusable values such a colours, font sizes, spacing etc
+- Nesting: to nest selectors inside of another, allowing us to write less code
+- Operators: for mathematical operations right inside of CSS
+- Partials and imports: to write CSS in different files and importing them all into a single file
+- Mixins: to write reusable pieces of CSS code
+- Functions: similar to mixins, with the difference that they produce a value that can be used
+- Extends: to make different selectors inherit declarations that are common to all of them
+- Control directives: for writing complex code using conditionals and loops (Not covered in this course, often used for writing CSS frameworks)
+
+## Syntax
+
+#### SaSS
+
+```
+.navigation {
+  list-style: none
+  float: left
+
+  & li
+  display: inline-block
+  margin-left: 30px
+}
+```
+
+#### SCSS syntax
+
+```
+.navigation {
+  list-style: none;
+  float: left;
+
+  & li {
+    display: inline-block;
+    margin-left: 30px;
+  }
+}
+```
