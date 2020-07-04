@@ -198,3 +198,109 @@ No the property is not inherited: specified value = initial value
 - A workflow to convert px to rem
 
 Using rem always the developer to easily create responsive websites because the sizings will be automatically adjusted to the font size
+
+# How CSS renders a website
+
+"Algorithm that calculates boxes and determines the layout of these boxes, for each element in the render tree, to determine the final layout of the page"
+
+- Dimensions of the boxes: the box model
+- Box type: inline, block and inline-block
+- Position scheme: floats and positioning
+- Stacking contexts
+- Other elements in the render tree
+- Viewport size, dimensions of images etc
+
+## The box model
+
+- Each and every element on the webpage can be seen as a box, each box can have a width, height, padding, border etc
+
+### Normal CSS box
+
+total width = right border + right padding, specified width + left padding + left border
+
+total height = top border + top padding + specified height + bottom padding + bottom border
+
+### Box Sizing: border-box
+
+Using border-box allows us to only get the width/height of our box by the specified dimensions, the padding/borders will take away from the inner sizing of the box
+
+total width = specified width
+total height = specified height
+
+## Box types
+
+### Block-level-boxes
+
+- Elements formatted visually as blocks
+- 100% of parents width
+- Vertically, one after another
+
+```
+display: block
+(display: flex)
+(display: list-item)
+(display: table)
+```
+
+### Inline-block boxes
+
+- A mix of block and inline
+- Occupies only contents space
+- No line-breaks
+- Box-model applies as showed
+
+```
+display: inline-block
+```
+
+### Inline boxes
+
+Essentially the opposite of a block-level-box
+
+- Content is distributed in lines
+- Occupies only contents space
+- No line-breaks
+- No heights / widths
+- Padding and margins only horizontal (left and right)
+
+```
+display: inline
+```
+
+## Positioning Schemes
+
+### Normal flow
+
+- Default positioning scheme
+- Not floated
+- Not absolutely positioned
+- Elements laid out according to their source order
+
+```
+Default
+position: relative
+```
+
+### Floats
+
+- Element is removed from the normal flow
+- Text and inline elements will wrap around the floated element
+- The container will not adjust its height to the element
+
+```
+float: left
+float: right
+```
+
+### Absolute positioning
+
+- Element is removed from the normal flow
+- No impact on surrounding content or elements
+- We use top, bottom, left and right to offset the element from it's relative positioned container
+
+```
+position: absolute
+position: fixed
+```
+
+## Stacking contexts
