@@ -344,3 +344,13 @@ The 7-1 pattern
 
 - 7 different folders for partial SaSS files
 - 1 main SaSS file to import all other files into a compiled CSS stylesheet
+
+#### The 7 folders
+
+1. base/
+2. components/
+3. layout/
+4. pages/
+5. themes/
+6. abstracts/
+7. vendors/
