@@ -303,4 +303,44 @@ position: absolute
 position: fixed
 ```
 
-## Stacking contexts
+# Components and BEM
+
+We want code that is
+
+- Clean, Modular, Reusable, and Ready for growth
+
+Think => Build => Architect
+
+### Think
+
+Component-driven-design
+
+- modular components that make up interfaces
+- held together by the layout of the page
+- reusable across a project and different projects
+- independent allowing us to use them anywhere on the page
+
+### Build
+
+BEM
+
+- Block element modifier
+
+```
+.block {}
+.block__element {}
+.block__element--modifier {}
+```
+
+- BLOCK: standalone component that is meaningful on it's own
+- ELEMENT: part of a block that has no standalone meaning
+- MODIFIER: a different version of a block or element
+
+[Example code block on udemy tut]
+
+### Architect
+
+The 7-1 pattern
+
+- 7 different folders for partial SaSS files
+- 1 main SaSS file to import all other files into a compiled CSS stylesheet
