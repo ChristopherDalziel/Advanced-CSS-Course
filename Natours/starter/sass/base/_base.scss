@@ -1,0 +1,16 @@
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: inherit;
+}
+
+html {
+  // This defines what 1rem is, any thats why it's staying in base instead of going to typography
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
