@@ -1,21 +1,16 @@
-/* Basic reset */
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
-  /* Setting the box sizing property on every single element */
   box-sizing: inherit; }
 
-/* 1rem is exactly what the root font-size is,m so because we've made our root font-size 10px, 1rem = 10px this makes creating changing our app to use rem very easy! */
 html {
-  /* Assuming the user is using the browser defaults making the font-size 16px, using 62.5% of that is 10px */
   font-size: 62.5%; }
 
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  /* font-size: 16px; */
   line-height: 1.7;
   color: #777;
   padding: 3rem;
@@ -26,51 +21,41 @@ body {
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
   background-size: cover;
   background-position: top;
-  /* This is the relative of where the top/bottom is taken from below */
   position: relative;
-  /* 0 0 = we don't want it to move on the x or y axis, 100% = we want it to be 100% of the width of the element, 100%, 50% = 100% x and 200px y, 0 100% = back to the start and 100% y (height) again. */
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%, 0 100%); }
-
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem; }
-
-.header__logo {
-  height: 3.5rem; }
-
-.header__text-box {
-  position: absolute;
-  /* Top and bottom are relative to the parent element */
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center; }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
   margin-bottom: 6rem; }
-
-.heading-primary--main {
-  display: block;
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-  animation-name: move-in-left;
-  animation-duration: 3s;
-  animation-timing-function: ease-out;
-  /* animation-iteration-count: 3; */
-  /* animation-delay: 3s; */ }
-
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.75rem;
-  animation-name: move-in-right;
-  animation-duration: 3s;
-  animation-timing-function: ease-out; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: move-in-left;
+    animation-duration: 3s;
+    animation-timing-function: ease-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation-name: move-in-right;
+    animation-duration: 3s;
+    animation-timing-function: ease-out; }
 
 @keyframes move-in-left {
   /* Start - Initial State */
@@ -109,22 +94,20 @@ body {
     opacity: 1;
     transform: translate(0); } }
 
-/* Pseudo class for link - style elements under a special condition  */
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  /* Gives element it's own space */
   display: inline-block;
   border-radius: 10rem;
-  /* all transitions short-hand, this also applies this transition to the hover and the active below the transition state must be on the initial state */
   transition: all 0.2s;
   position: relative; }
 
 .btn:hover {
   transform: translateY(-0.3rem);
-  /* offset in the x direction, offset in the y direction, blur, color and transparency */
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
 
 .btn:active {
   transform: translateY(-0.1rem);
@@ -136,10 +119,8 @@ body {
   padding: 1.5rem 4rem; }
 
 .btn::after {
-  /* When you pseudo after, we MUST specify content & display */
   content: "";
   display: inline-block;
-  /* This is 100% of the width of the already specified btn */
   height: 100%;
   width: 100%;
   border-radius: 10rem;
@@ -152,13 +133,6 @@ body {
 .btn--white::after {
   background-color: #fff; }
 
-/* pseudo after only when the button is hovered */
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  /* Fade out, it's going to opacity 0 */
-  opacity: 0; }
-
 .btn--animated {
   animation: move-in-bottom 3s ease-out 0.75s;
-  /* Automatically applies the 0% keyframe before the animation begins */
   animation-fill-mode: backwards; }
