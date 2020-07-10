@@ -402,3 +402,25 @@ SaSS Source Code => SaSS Compiler => Compiled SaSS Code (Regular CSS Code)
   }
 }
 ```
+
+# Responsive design
+
+1. Fluid grids and layouts
+
+- Allows content to easily adapt to the current viewport width to browse the website uses % rather than px for all layout related lengths.
+
+2. Flexible and responsive images
+
+- Images behave differently to text content so we need to ensure they adapt nicely to the current viewport.
+
+3. Media Queries
+
+- To change styles on certain viewport widths (Known as breakpoints), allowing us to create a different version of the website for different widths.
+
+## Fluid grids and layouts
+
+There are 3 major ways to layout our application
+
+1. Float layouts
+2. Flexbox
+3. CSS Grid
