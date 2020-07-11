@@ -1,0 +1,21 @@
+.row {
+  max-width: $grid-width;
+  background-color: #eee;
+  margin: 0 auto;
+
+  // Everything except for the LAST child (Our last row element)
+  &:not(:last-child) {
+    margin-bottom: $gutter-vertical;
+  }
+
+  // A column which is also within a row, this is why it's added within the .row{}
+  .col-1-of-2 {
+    width: calc((100% - #{$gutter-horizontal}) / 2);
+    background-color: orangered;
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal;
+    }
+  }
+}
