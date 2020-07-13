@@ -14,4 +14,11 @@
     ),
     url(../img/nat-4.jpg);
   background-size: cover;
+  transform: skewY(-7deg);
+  margin-top: -17rem;
+
+  // Select everything that is a direct child of .section-features
+  & > * {
+    transform: skewY(7deg);
+  }
 }
