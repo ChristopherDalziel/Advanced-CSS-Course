@@ -18,7 +18,7 @@
     // Hides the back of an element so we can't see the back part of the card anymore
     backface-visibility: hidden;
     border-radius: 3px;
-    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15a);
 
     &--front {
       background-color: $color-white;
