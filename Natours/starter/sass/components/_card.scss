@@ -17,14 +17,23 @@
     left: 0;
     // Hides the back of an element so we can't see the back part of the card anymore
     backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
 
     &--front {
       background-color: $color-white;
     }
 
     &--back {
-      background-color: green;
       transform: rotateY(180deg);
+
+      &-1 {
+        background-image: linear-gradient(
+          to left top,
+          $color-secondary-light,
+          $color-secondary-dark
+        );
+      }
     }
   }
 
