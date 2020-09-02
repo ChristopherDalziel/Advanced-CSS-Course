@@ -1,15 +1,15 @@
 .card {
+  // FUNCTIONALITY
+
   // perspective for rotation - the perspective makes it appear that the card is moving towards the user, the lower the number the more drastic the perspective.
   perspective: 150rem;
   // firefox
   -moz-perspective: 150rem;
   position: relative;
-  height: 50rem; // 500px
+  height: 51rem; // 500px
 
   &__side {
-    color: #fff;
-    font-size: 5rem;
-    height: 50rem; // 500px
+    height: 51rem; // 500px
     width: 100%;
     transition: all 0.8s ease;
     position: absolute;
@@ -18,6 +18,8 @@
     // Hides the back of an element so we can't see the back part of the card anymore
     backface-visibility: hidden;
     border-radius: 3px;
+    // stops image from overflowing the parent
+    overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15a);
 
     &--front {
@@ -45,5 +47,79 @@
 
   &:hover &__side--back {
     transform: rotateY(0);
+  }
+
+  // FRONT SIDE STYLING
+  &__picture {
+    background-size: cover;
+    height: 23rem;
+    // Some blend modes that are in PS
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+    &--1 {
+      // We go 1 level up because this path is directed from the style.css folder => Actually an issue i've experienced before.
+      background-image: linear-gradient(
+          to left top,
+          $color-secondary-light,
+          $color-secondary-dark
+        ),
+        url("../img/nat-5.jpg");
+    }
+
+    &--2 {
+      background-image: url("../img/nat-5.jpg");
+    }
+
+    &--3 {
+      background-image: url("../img/nat-5.jpg");
+    }
+  }
+
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: $color-white;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 75%;
+  }
+
+  &__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+
+    &--1 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-secondary-light, 0.85),
+        rgba($color-secondary-dark, 0.85)
+      );
+    }
+  }
+
+  &__details {
+    padding: 3rem 0;
+
+    ul {
+      list-style: none;
+      width: 80%;
+      // margin: 0 auto;
+
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-grey-light-2;
+        }
+      }
+    }
   }
 }
