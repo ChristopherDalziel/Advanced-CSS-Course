@@ -7,8 +7,7 @@
   height: 50rem; // 500px
 
   &__side {
-    background-color: orangered;
-    color: white;
+    color: #fff;
     font-size: 5rem;
     height: 50rem; // 500px
     width: 100%;
@@ -20,7 +19,7 @@
     backface-visibility: hidden;
 
     &--front {
-      background-color: orange;
+      background-color: $color-white;
     }
 
     &--back {
