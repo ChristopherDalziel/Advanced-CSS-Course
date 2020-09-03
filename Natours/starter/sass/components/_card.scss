@@ -74,6 +74,8 @@
     background-blend-mode: screen;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
 
     &--1 {
       // We go 1 level up because this path is directed from the style.css folder => Actually an issue i've experienced before.
@@ -153,6 +155,7 @@
       list-style: none;
       width: 80%;
       margin: 0 auto;
+      padding: 0;
 
       li {
         text-align: center;
