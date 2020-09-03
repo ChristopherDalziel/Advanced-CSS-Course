@@ -6,16 +6,17 @@
   // firefox
   -moz-perspective: 150rem;
   position: relative;
-  height: 51rem; // 500px
+  height: 52rem; // 500px
 
   &__side {
-    height: 51rem; // 500px
-    width: 100%;
+    height: 52rem; // 500px
     transition: all 0.8s ease;
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
     // Hides the back of an element so we can't see the back part of the card anymore
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 3px;
     // stops image from overflowing the parent
@@ -104,12 +105,12 @@
   }
 
   &__details {
-    padding: 3rem 0;
+    padding: 3rem;
 
     ul {
       list-style: none;
       width: 80%;
-      // margin: 0 auto;
+      margin: 0 auto;
 
       li {
         text-align: center;
@@ -121,5 +122,32 @@
         }
       }
     }
+  }
+
+  // BACK SIDE STYLING
+  &__cta {
+    position: absolute;
+    // centre
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+  }
+
+  &__price-box {
+    // text-align: center;
+    color: $color-white;
+    margin-bottom: 8rem;
+  }
+
+  &__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+
+  &__price-value {
+    font-size: 6rem;
+    font-weight: 100;
   }
 }
