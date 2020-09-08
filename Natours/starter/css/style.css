@@ -138,7 +138,8 @@ body {
   position: relative;
   font-size: 1.6rem;
   border: none;
-  cursor: pointer; }
+  cursor: pointer;
+  backface-visibility: hidden; }
 
 .btn:hover {
   transform: translateY(-3px);
