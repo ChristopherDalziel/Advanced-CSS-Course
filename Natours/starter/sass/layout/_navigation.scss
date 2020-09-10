@@ -72,6 +72,11 @@
       );
       background-size: 220%;
       transition: all 0.4s;
+
+      span {
+        margin-right: 1rem;
+        display: inline-block;
+      }
     }
 
     &:hover,
