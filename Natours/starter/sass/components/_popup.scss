@@ -5,14 +5,55 @@
   top: 0;
   left: 0;
   background-color: rgba($color-black, 0.8);
-  border-radius: 3px;
+  z-index: 9999;
 
   &__content {
     @include absoluteCenter;
 
     width: 75%;
-    height: 50rem;
     background-color: $color-white;
     box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
+    border-radius: 3px;
+    // Means the content is a table
+    display: table;
+    // Removes the edge of the image that is overflowing the box
+    overflow: hidden;
+  }
+
+  &__left {
+    width: 33.3333333%;
+    // Creates table cells within the table
+    display: table-cell;
+  }
+
+  &__right {
+    width: 66.6666667%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 3rem 5rem;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+
+    // Column layout
+    -moz-column-count: 2;
+    -moz-column-gap: 4rem;
+    -moz-column-rule: 1px solid $color-grey-light-2;
+    column-count: 2;
+    column-gap: 4rem; //Remember 1em = 14px (default coulum-gap = 1em)
+    column-rule: 1px solid $color-grey-light-2;
+
+    // Hyphenation - auto adds hyphens where needed
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
   }
 }
