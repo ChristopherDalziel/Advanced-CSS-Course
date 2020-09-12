@@ -608,7 +608,8 @@ body {
   right: 6rem;
   z-index: 2000;
   text-align: center;
-  cursor: pointer; }
+  cursor: pointer;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4); }
 
 .navigation__background {
   height: 6rem;
