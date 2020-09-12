@@ -425,15 +425,17 @@ body {
   width: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.2); }
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 3px; }
   .popup__content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 85vw;
-    height: 70vh;
-    background-color: #fff; }
+    width: 75%;
+    height: 50rem;
+    background-color: #fff;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2); }
 
 .story {
   width: 75%;

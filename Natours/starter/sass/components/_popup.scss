@@ -4,8 +4,15 @@
   width: 100%;
   top: 0;
   left: 0;
-  background-color: rgba($color-black 0.8);
+  background-color: rgba($color-black, 0.8);
+  border-radius: 3px;
 
   &__content {
+    @include absoluteCenter;
+
+    width: 75%;
+    height: 50rem;
+    background-color: $color-white;
+    box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
   }
 }
