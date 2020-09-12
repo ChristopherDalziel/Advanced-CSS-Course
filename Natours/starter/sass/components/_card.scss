@@ -171,11 +171,8 @@
 
   // BACK SIDE STYLING
   &__cta {
-    position: absolute;
-    // centre
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @include absoluteCenter;
+
     width: 90%;
     text-align: center;
   }
