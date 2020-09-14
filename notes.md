@@ -424,3 +424,69 @@ There are 3 major ways to layout our application
 1. Float layouts
 2. Flexbox
 3. CSS Grid
+
+# Responsive Design
+
+## Desktop v Mobile
+
+### Desktop
+
+Traditionally design for desktop first, and then write media queries of max width for mobile
+
+```
+@media (max-width: 600px)
+```
+
+### Mobile
+
+Start writing CSS for small screens, and then the media queries expand to a large desktop screen, this is becoming the new norm.
+
+```
+@media (min-width: 600px)
+```
+
+When designing for mobile we really need to keep in mind what we NEED to display to create an efficient and fast design
+
+### Desktop
+
+- 0px
+- 600px ( - Example: max-width 600px all the css that was written would be applied to ALL screens from 0-600px)
+- 900px
+- 1200px
+
+When using max-width media queries, if the screen was 500px, and we had a max-with of 600px and 900px both would apply, conflicting css rules will often occur the the one that appears LAST in the code takes precedence, this is because media queries do not add any importance of specificity to selectors so only the order of the code matters. (This is why media queries ALWAYS come last).
+
+In this example anything above 1200px would be 'desktop first' / our initial css design
+
+### Mobile
+
+- 0px
+- 600px ( - Example: min-width 600px, if the current viewport with is more than 600px then the css applies)
+- 900px
+- 1200px
+
+We use min-width approach when designing for mobile first because we want the media queries to stay away from our small screen styles. This is why the max-width media queries would not work.
+As we go up to 900px and 1200px view port sizes, the same logic applies designing for each view port.
+
+## Pro's Con's of Mobile First
+
+No matter what you decided always keep desktop and mobile in mind
+
+### Pro's
+
+- 100% optimized for the mobile experience
+- Reducers websites and apps to the essentials
+- Results in smaller, faster and more efficient products
+- Prioritizes content over aesthetic design which may be desirable.
+
+### Con's
+
+- The desktop version might feel overly empty and simplistic
+- More difficult and counterintuitive to develop
+- Less creative freedom making it more difficult to create distinctive products
+- Clients are used to seeing a desktop version of the site as a prototype
+- Do your users even use the mobile internet.. consider the purpose of your website
+
+## Pro's and Con's of Desktop First
+
+No matter what you decided always keep desktop and mobile in mind
