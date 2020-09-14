@@ -1,3 +1,5 @@
+# Advanced CSS Notes - Udemy course by Jonas Schmedtmann
+
 # The Three Pillars of writing GOOD HTML and CSS
 
 1. Responsive Design
@@ -487,6 +489,30 @@ No matter what you decided always keep desktop and mobile in mind
 - Clients are used to seeing a desktop version of the site as a prototype
 - Do your users even use the mobile internet.. consider the purpose of your website
 
-## Pro's and Con's of Desktop First
+## Breakpoints
 
-No matter what you decided always keep desktop and mobile in mind
+### Bad
+
+- Using the width of popular products <br/>
+  This is not good because you're designing for specific products, what if apple decides to change their screen size or resolution? - Your app won't function as intended
+
+### Good
+
+- Get all the most used device widths, group them together and create breakpoints around these. <br/>
+  This is much better than the first one because you aren't designing with a single device in mind but many.
+
+### Perfect
+
+Begin at a size desktop or mobile, then start increasing/decreasing your view port size, each time the app breaks, add a media q. This is the most difficult, but the most ideal.
+
+## Chosing your breakpoints: "Good" design method
+
+`www.gs.statcounter.com` - Use this site to find the average of most used screen resolutions to make some up to date decisiomns about where your break points might be.
+
+Usually we will need the following <br/>
+
+1. Phone (0-600) [iPhone 8]
+2. Tablet portrait (600-900) [iPad portrait]
+3. Tablet landscape (900-1200) [iPad landscape]
+4. Desktop (1200-1800) [MacBook pro 15"]
+5. Big desktop (1800+) []
