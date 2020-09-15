@@ -15,6 +15,8 @@ html {
   //   font-size: 50%; //
   // }
 
+  // tab-land goes first because when the screen is below 1200px we want tab-land to apply not tab-port and tab-land causing a conflict. The larger ones should always go first. When doing max-width.
+
   @include respond(tab-land) {
     // width < 1200?
     font-size: 56.25%; // 1rem = 9px, 9/16 = 56.25%
