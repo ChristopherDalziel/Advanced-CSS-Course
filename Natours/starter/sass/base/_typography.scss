@@ -20,8 +20,8 @@ body {
     animation-timing-function: ease-out;
 
     @include respond(phone) {
-      letter-spacing: 0;
-      font-size: 5rem;
+      letter-spacing: 1rem;
+      font-family: 5rem;
     }
   }
 
@@ -35,8 +35,7 @@ body {
     animation-timing-function: ease-out;
 
     @include respond(phone) {
-      letter-spacing: 0.5rem;
-      // font-size: 5rem;
+      letter-spacing: 1rem;
     }
   }
 }
