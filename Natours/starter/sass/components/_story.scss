@@ -9,22 +9,38 @@
   font-size: $default-font-size;
   transform: skewX(-12deg);
 
+  @include respond(tab-port) {
+    width: 80%;
+    padding: 4rem;
+    padding-left: 7rem;
+  }
+
+  @include respond(phone) {
+    transform: skewX(0);
+  }
+
   &__shape {
     width: 15rem;
     height: 15rem;
-    background-color: orangered;
     float: left;
+    transform: translateX(-3rem) skewX(12deg);
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
 
     // font around text, 50% of the height/width of the circle, centered at the middle of the shape - this only works if it's floated, has a height and width.
-    -webkit-shape-outside: circle(50% at 50% 50%);
-    shape-outside: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
-    transform: translate(-3rem) skewX(12deg);
-    position: relative;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    border-radius: none;
+
+    @include respond(phone) {
+      transform: translateX(-3rem) skewX(0);
+    }
   }
 
-  &__image {
+  &__img {
     height: 100%;
     transform: translateX(-4rem) scale(1.4);
     backface-visibility: hidden;
@@ -33,11 +49,17 @@
 
   &__text {
     transform: skewX(12deg);
+
+    @include respond(phone) {
+      transform: skewX(0);
+    }
   }
 
   &__caption {
-    @include absoluteCenter;
-
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
     color: $color-white;
     text-transform: uppercase;
     font-size: 1.7rem;
@@ -45,16 +67,17 @@
     opacity: 0;
     transition: all 0.5s;
     // Removes small movements on hover
+
     backface-visibility: hidden;
   }
 
   // When the story is hovered we want to change the caption
   &:hover &__caption {
-    opacity: 0.99;
+    opacity: 1;
     transform: translate(-50%, -50%);
   }
 
-  &:hover &__image {
+  &:hover &__img {
     transform: translateX(-4rem) scale(1);
     filter: blur(3px) brightness(80%);
   }
