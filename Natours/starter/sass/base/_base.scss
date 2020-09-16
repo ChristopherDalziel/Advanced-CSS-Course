@@ -11,10 +11,6 @@ html {
   // Because our rem is defined by our font size, when we increase/decrease our font size using media queries all of our rems will get bigger/smaller.
   font-size: 62.5%; // 1rem = 10px. 10px/16px = 62.5%
 
-  // @include respond(phone) {
-  //   font-size: 50%; //
-  // }
-
   // tab-land goes first because when the screen is below 1200px we want tab-land to apply not tab-port and tab-land causing a conflict. The larger ones should always go first. When doing max-width.
 
   @include respond(tab-land) {
@@ -40,4 +36,9 @@ html {
 
 body {
   box-sizing: border-box;
+  padding: 3rem;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
 }

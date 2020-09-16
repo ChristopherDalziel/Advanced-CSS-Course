@@ -36,7 +36,10 @@ $breakpoint argument choices:
 - tab-port
 - tab-land
 - big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
 */
+
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
     // We will use rem instead of px on our media queries this is so if the user changes the default font-size the content is still effected.
